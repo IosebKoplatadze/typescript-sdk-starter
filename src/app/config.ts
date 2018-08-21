@@ -1,4 +1,4 @@
 export const Config = {
-  sdkSomethingId: 'sdk-Something'
+  sdkSomethingId: 'sdk-something'
   //someData: 'data'
 };
