@@ -1,4 +1,5 @@
 import { Observable, Observer } from 'rxjs';
+import { Payment } from '../models/payment';
 
 export class RouterService {
   private static _routerService: RouterService;
@@ -23,10 +24,10 @@ export class RouterService {
     return this.observable$;
   }
 
-  public onSomePage(page: string, params: any): void {
-    this.observer.next({ page, params });
+  public onPaymentDetails(payment: Payment): void {
+    this.observer.next(payment);
   }
   public onBack(): void {
-    this.observer.next({ page: 'back' });
+    this.observer.next('back');
   }
 }

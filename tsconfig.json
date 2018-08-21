@@ -2,7 +2,7 @@
   "compilerOptions": {
     "module": "commonjs",
     "target": "es5",
-    "outDir": "./dist/sdk-payments/",
+    "outDir": "./dist/sdk-something/",
     "noImplicitAny": true,
     "removeComments": true,
     "sourceMap": true,
@@ -11,7 +11,7 @@
   // "include": [
   //   "src/**/*"
   // ],
-  "files": ["src/paymentSDK.ts"],
+  "files": ["src/somethingSDK.ts"],
   "exclude": [
     "node_modules",
     "**/*.spec.ts"

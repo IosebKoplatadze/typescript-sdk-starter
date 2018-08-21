@@ -1,11 +1,11 @@
 const path = require('path');
 
 module.exports = {
-  entry: path.join(__dirname, 'src/paymentSDK.ts'),
+  entry: path.join(__dirname, 'src/somethingSDK.ts'),
   output: {
-    filename: 'payments.sdk.js',
-    path: path.resolve(__dirname, 'dist/sdk-payments'),
-    library: 'PaymentsSDK'
+    filename: 'something.sdk.js',
+    path: path.resolve(__dirname, 'dist/sdk-something'),
+    library: 'SomethingSDK'
   },
   module: {
     rules: [{
@@ -22,6 +22,6 @@ module.exports = {
     extensions: [".tsx", ".ts", ".js"]
   },
   devServer: {
-    contentBase: path.join(__dirname, './')
+    contentBase: path.join(__dirname, './src')
   }
 };

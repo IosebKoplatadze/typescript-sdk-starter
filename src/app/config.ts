@@ -1,5 +1,4 @@
 export const Config = {
-  sngPaymentsId: 'sng-payments',
-  apiEndpoint: 'https://newsiteapi.singulardev.uk',
-  allowedDetailsType: 2
+  sdkSomethingId: 'sdk-Something'
+  //someData: 'data'
 };
