@@ -10,4 +10,4 @@ export function init(
   Core.instance.init(lang, type, userId, providerId);
 }
 
-init('ka', 'Deposit', 0, '');
+//init('ka', 'Deposit', 0, '');
