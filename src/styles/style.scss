@@ -1,0 +1,306 @@
+$color-red : #d40100;
+$text-color : #7f7f7f;
+$shadow-color : rgba(0,0,0,0.4);
+$border-color : rgba(255, 255, 255, 0.03);
+$bg-color : rgba(26, 26, 26, .9);
+
+$modal-header-color : #1a1a1a;
+$modal-footer-color : #1e1e1e;
+
+#sng-payments {
+    min-height: 180px;
+}
+
+.payment-list-container {
+    width: 100%;
+
+    .payment-list {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        background-color: $bg-color;
+    }
+
+    .grid__row {
+        display: flex;
+        flex-direction: row;
+        box-shadow: inset 0 -1px 0px 0px $shadow-color;
+        border-bottom: 1px solid $border-color;
+    }
+    
+    .grid__col {
+        flex: 1;
+        text-align: center;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: inset -1px 0px 0px 0px $shadow-color;
+        border-right: 1px solid $border-color;
+        padding: 0 10px;
+        color: $text-color;
+        position: relative;
+
+        &:first-child {
+            min-width: 180px;
+        }
+
+        &:last-child {
+            box-shadow: none;
+            border-right: none;
+        }
+
+        img {
+            width: 100%;
+            max-width: 260px;
+        }
+    }
+
+    .instruction-content {
+        padding: 20px;
+        color: $text-color;
+        text-align: center;
+        line-height: 20px;
+        box-shadow: inset 0 -1px 0px 0px $shadow-color;
+        border-bottom: 1px solid $border-color;
+    }
+
+    .btn-success {
+        width: 100px;
+        height: 30px;
+        border-radius: 2px;
+        color: #fff;
+        border: none;
+        background-color: #5c9b07;
+        outline: none;
+        cursor: pointer;
+    }
+
+    .btn-instruction {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        border: none;
+        background-color: transparent;
+        outline: none;
+        cursor: pointer;
+        color: $text-color;
+
+        &:hover {
+            background-color: #1d1d1d;
+            color: $color-red;
+        }
+
+        .text {
+            position: relative;
+        }
+
+        .icon-triangle-arrow{
+            width: 0; 
+            height: 0; 
+            border-left: 4px solid transparent;
+            border-right: 4px solid transparent;
+            border-top: 4px solid $color-red;
+            position: absolute;
+            top: 50%;
+            right: -20px;
+        }
+    }
+
+    .btn-footer {
+        min-width: 90px;
+        height: 30px;
+        padding: 0 10px;
+        text-align: center;
+        color: #fff;
+        background-color: $color-red;
+        text-transform: uppercase;
+        border-radius: 2px;
+        border: 1px solid #000;
+        display: inline-block;
+    }
+}
+
+.is-hidden {
+    display: none;
+}
+
+.modal_container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 400px;
+
+    .modal {
+        border-radius: 2px;
+        overflow: hidden;
+    }
+
+    .modal__header {
+        background-color: $modal-header-color;
+        padding: 10px 15px;
+        position: relative;
+        box-shadow: inset 0 -1px 0px 0px $shadow-color;
+        border-bottom: 1px solid $border-color;
+
+        .modal__close {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translate(0, -50%);
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            display: block;
+
+            &:after {
+                content: "";
+                background-color: #5a5a5a;
+                width: 2px;
+                height: 14px;
+                border-radius: 10px;
+                transform: rotate(45deg);
+                display: block;
+                position: absolute;
+                left: 8px;
+                top: 3px;
+            }
+
+            &:before {
+                content: "";
+                background-color: #5a5a5a;
+                width: 2px;
+                height: 14px;
+                border-radius: 10px;
+                transform: rotate(-45deg);
+                display: block;
+                position: absolute;
+                left: 8px;
+                top: 3px;
+            }
+        }
+
+        h2 {
+            margin: 0;
+            padding: 0;
+            font-size: 14px;
+            color: $text-color;
+            text-transform: uppercase;
+        }
+    }
+
+    .modal__header {
+        background-color: $modal-header-color;
+    }
+
+    .content_container {
+        position: relative;
+    }
+
+    .modal__content {
+        background-color: $bg-color;
+        padding: 30px;
+        text-align: center;
+        box-shadow: inset 0 -1px 0px 0px $shadow-color;
+        border-bottom: 1px solid $border-color;
+
+        .form__label {
+            color: $text-color;
+        }
+
+        .form__input {
+            height: 30px;
+            border-radius: 2px;
+            border: 1px solid $border-color;
+            background-color: #0e0e0e;
+            outline: none;
+            padding: 0 10px;
+            color: #5a5a5a;
+            box-sizing: border-box;
+        }
+
+        .form__message {
+            // position: absolute;
+        }
+
+        .modal__message {
+            position: absolute;
+            top: 100%;
+            margin: 0;
+            padding: 0;
+            font-size: 12px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            margin-top: 5px;
+        }
+
+        .text--danger {
+            color: $color-red;
+        }
+    }
+
+    .modal__footer {
+        background-color: $modal-footer-color;
+        padding: 15px;
+        text-align: center;
+    }
+}
+
+.loading {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+
+    &.hide {
+      display: none;
+    }
+}
+
+// Loader
+#loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 12321;
+    transform: translate(-50%, -50%);
+}
+#loader span{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background-color: #3498db;
+    margin: 0 5px;
+    opacity: 0;
+  }
+  
+  #loader span:nth-child(1){
+    animation: opacitychange 1s ease-in-out infinite;
+  }
+  
+  #loader span:nth-child(2){
+    animation: opacitychange 1s ease-in-out 0.33s infinite;
+  }
+  
+  #loader span:nth-child(3){
+    animation: opacitychange 1s ease-in-out 0.66s infinite;
+  }
+  
+  @keyframes opacitychange{
+    0%, 100%{
+      opacity: 0;
+    }
+  
+    60%{
+      opacity: 1;
+    }
+  }
+  
